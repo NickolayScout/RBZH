@@ -351,6 +351,46 @@
             filter: invert(1);
             flex-shrink: 0;
         }
+        .inline-icon {
+            height: 1.2em;
+            vertical-align: middle;
+        }
+        .death-box {
+            display: flex;
+            align-items: stretch;
+            border: 2px solid #444444;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        .death-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 10px;
+            border-right: 1px solid #444444;
+            gap: 4px;
+            font-weight: bold;
+            color: #F5F5F5;
+            font-size: 13px;
+            text-align: center;
+        }
+        .death-skull {
+            flex: 1;
+            min-height: 0;
+            max-height: 100%;
+            width: auto;
+            max-width: 52px;
+            object-fit: contain;
+            display: block;
+        }
+        .death-desc {
+            padding: 8px 14px;
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -837,11 +877,19 @@
         <div class="sub-header">Ранения</div>
         <p>Твою способность оставаться в бою определяют два параметра: кровь и болевой порог.
             Каждое оружие наносит боль и может вызывать кровотечение.</p>
-        <div class="note-box"><strong>Смерть персонажа.</strong> Персонаж погибает только при полной потере крови.
-            В большинстве случаев тяжелораненого можно откачать.
+        <div class="death-box">
+            <div class="death-label">
+                <img src="assets/dead.svg" alt="" class="death-skull">
+                Смерть<br>персонажа.
+            </div>
+            <div class="death-desc">
+                Персонаж погибает только при полной потере крови. В большинстве случаев тяжелораненого можно откачать.
+            </div>
         </div>
 
-        <div class="sub-header">-- Боль</div>
+        <div class="sub-header">-- Боль
+
+        </div>
         <div class="quote-box"><p>Боль -- твой надёжный союзник. Она подаёт сигнал бедствия.</p></div>
         <p>Верный признак того, что ты всё ещё живой.
             Твой болевой порог -- <strong>10 + Воля</strong> очков.
@@ -850,7 +898,7 @@
             Если боль сбить (например, ввести морфий) -- эффект пропадает, и ты можешь вернуться в бой.</p>
         <p><a href="#8-фармакология">Медикаменты и наркотики</a>, как правило, воздействуют на боль тем или иным
             способом.</p>
-        <p>Получив <strong>Болевой шок</strong>, ты падаешь на землю и твоё сознание помутняется.
+        <p>Получив <strong>Болевой шок</strong> <img src="assets/painshock.svg" alt="" class="inline-icon">, ты падаешь на землю и твоё сознание помутняется.
             Ты всё ещё видишь, что происходит вокруг, но не можешь перемещаться и совершать действия.</p>
         <p>Если атака по тебе попала, но не пробила броню, ты получаешь половину болевого урона.</p>
 
@@ -860,7 +908,7 @@
             В твоём теле <strong>10 + Тело</strong> единиц крови.
             Кровь теряется при кровотечении каждый раунд во время хода персонажа.</p>
         <p>Ты начинаешь терять кровь, когда пуля-дура нарушает целостность твоего тела.
-            Такой эффект называется <strong>Кровопотеря</strong>. Получив его, отними у себя 1 очко крови в конце
+            Такой эффект называется <strong>Кровопотеря</strong> <img src="assets/bleeding.svg" alt="" class="inline-icon">. Получив его, отними у себя 1 очко крови в конце
             каждого хода.</p>
         <p>Кровь <strong>не восстанавливается сама по себе</strong>. Ищи пакеты с кровью или донора.</p>
         <p>И ты, и согласный НИП может действием отдать свою кровь другому.
@@ -1844,7 +1892,7 @@
 
         <div style="display:flex; align-items:center">
             <img class="gun-img" src="assets/rcl_plasma.svg" alt="Plasma RCL" style="padding-right:12px;">
-            <div class="sub-header" style="margin:20px 0 8px">PLAS-4 "Королевна"</div>
+            <div class="sub-header" style="margin:20px 0 8px">PLAS-4 "Прогноз"</div>
         </div>
         <p>Выпускает сгусток перегретой плазмы. Имеет два режима огня на любой случай жизни.</p>
         <table>
