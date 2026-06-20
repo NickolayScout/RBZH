@@ -250,7 +250,7 @@
 <div class="wrap">
 
     <div class="page-title">РУБЕЖ</div>
-    <div class="page-sub">Шпаргалка &nbsp;·&nbsp; Черновик 0.40</div>
+    <div class="page-sub">Шпаргалка &nbsp;·&nbsp; Черновик 0.41</div>
 
     <div class="grid-3">
 
@@ -384,31 +384,37 @@
                 <div class="block-body">
                     <table>
                         <tr>
+                            <th>Шаг</th>
                             <th>Уровень</th>
                             <th>Эффект</th>
                         </tr>
                         <tr>
+                            <td style="background:#0d3b0d!important">0</td>
                             <td style="background:#0d3b0d!important"><strong style="color:#6fcf6f">0–3</strong>
                                 Расположение духа
                             </td>
                             <td style="background:#0d3b0d!important">+1 к броскам Воли</td>
                         </tr>
                         <tr>
+                            <td style="background:#1c1c1c!important">1</td>
                             <td style="background:#1c1c1c!important"><strong>4–5</strong> Норма</td>
                             <td style="background:#1c1c1c!important">Без штрафов</td>
                         </tr>
                         <tr>
+                            <td style="background:#3b2d00!important">2</td>
                             <td style="background:#3b2d00!important"><strong style="color:#E6A343">6–7</strong>
                                 Напряжение
                             </td>
                             <td style="background:#3b2d00!important">−1 к броскам Воли</td>
                         </tr>
                         <tr>
+                            <td style="background:#3b1100!important">3</td>
                             <td style="background:#3b1100!important"><strong style="color:#e06030">8–9</strong> Срыв
                             </td>
                             <td style="background:#3b1100!important">−2 Воля, −2 очерёдность хода</td>
                         </tr>
                         <tr>
+                            <td style="background:#4d0000!important">4</td>
                             <td style="background:#4d0000!important"><strong style="color:#F51111">10</strong> Сломан
                             </td>
                             <td style="background:#4d0000!important">Апатия. Нет действий вне боя.</td>
@@ -529,12 +535,16 @@
                     <div class="gun-card-body">
                         <table>
                             <tr>
+                                <td>Атака</td>
+                                <td>2d8</td>
+                            </tr>
+                            <tr>
                                 <td>PEN</td>
                                 <td>1</td>
                             </tr>
                             <tr>
                                 <td>Боль</td>
-                                <td>2d4</td>
+                                <td>2d6</td>
                             </tr>
                             <tr>
                                 <td>Дальность</td>
@@ -551,6 +561,10 @@
                     </div>
                     <div class="gun-card-body">
                         <table>
+                            <tr>
+                                <td>Атака</td>
+                                <td>2d8</td>
+                            </tr>
                             <tr>
                                 <td>PEN</td>
                                 <td>4</td>
@@ -615,7 +629,7 @@
                             </tr>
                             <tr>
                                 <td>Подавление</td>
-                                <td class="suppression-fmt">4m/8/7</td>
+                                <td class="suppression-fmt">3m/8/7</td>
                             </tr>
                             <tr>
                                 <td>Дальность</td>
@@ -646,7 +660,7 @@
                             </tr>
                             <tr>
                                 <td>Подавление</td>
-                                <td class="suppression-fmt">5m/10/8</td>
+                                <td class="suppression-fmt">3m/10/8</td>
                             </tr>
                             <tr>
                                 <td>Дальность</td>
@@ -754,7 +768,7 @@
                             </tr>
                             <tr>
                                 <td>Подавление</td>
-                                <td class="suppression-fmt">5m/10/8</td>
+                                <td class="suppression-fmt">4m/10/8</td>
                             </tr>
                             <tr>
                                 <td>Дальность</td>
@@ -774,7 +788,7 @@
 
     <!-- ULITKA -->
     <div class="block">
-        <div class="block-title">Улитка — метательное оружие (2d6, до 15м + 2×Тело)</div>
+        <div class="block-title">Улитка — метательное оружие (2d8, до 15м + 2×Тело)</div>
         <div class="block-body">
             <div class="ulitka-wrap">
                 <div style="flex-shrink:0;">
@@ -787,24 +801,24 @@
                         </tr>
                         <tr>
                             <td>дальше</td>
-                            <td>10</td>
-                            <td>11</td>
-                            <td>12</td>
+                            <td>16</td>
+                            <td>15</td>
+                            <td>14</td>
                         </tr>
                         <tr>
                             <td class="ulitka-hit">точно!</td>
-                            <td>9</td>
-                            <td class="ulitka-hit">6–8</td>
                             <td>5</td>
+                            <td class="ulitka-hit">6–12</td>
+                            <td>13</td>
                         </tr>
                         <tr>
                             <td>ближе</td>
-                            <td>2</td>
-                            <td>3</td>
                             <td>4</td>
+                            <td>3</td>
+                            <td>2</td>
                         </tr>
                     </table>
-                    <p style="margin:4px 0 0;font-size:11px;color:#888;">2 — ближе · 11 — дальше. Отмеряется от тебя к цели.<br>До 5м — падает точно. Дальше — кидай 2d6.</p>
+                    <p style="margin:4px 0 0;font-size:11px;color:#888;">2 — ближе · 15 — дальше. Отмеряется от тебя к цели.<br>До 5м — падает точно. Дальше — кидай 2d8. Числовой бонус атаки прибавь к броску.</p>
                 </div>
                 <div class="ulitka-note">
                     <table style="margin:0;">
@@ -824,7 +838,7 @@
                             <td>Дым</td>
                             <td>15м + 2×Тело</td>
                             <td>Ребро 3м</td>
-                            <td>Радиус 12м, 3 хода</td>
+                            <td>Радиус 6м, 3 хода</td>
                         </tr>
                         <tr>
                             <td>AGL-42</td>
@@ -838,7 +852,27 @@
         </div>
     </div>
 
-    <div style="text-align:center;margin-top:16px;font-size:11px;color:#333;">РУБЕЖ · Черновик 0.40</div>
+    <!-- SPAJKA -->
+    <div class="block" style="margin-top:10px;">
+        <div class="block-title">Спайка</div>
+        <div class="block-body">
+            <p style="margin:0 0 6px;font-size:12px;color:#aaa;">Общий командный ресурс. Тратится вне своего хода на классовые способности.</p>
+            <table>
+                <tr>
+                    <th>Шаг стресса</th>
+                    <th>Спайка за ватажку</th>
+                </tr>
+                <tr><td>0 (Расположение духа)</td><td>5</td></tr>
+                <tr><td>1 (Норма)</td><td>4</td></tr>
+                <tr><td>2 (Напряжение)</td><td>3</td></tr>
+                <tr><td>3 (Срыв)</td><td>2</td></tr>
+                <tr><td>4 (Сломан)</td><td>1</td></tr>
+            </table>
+            <p style="margin:6px 0 0;font-size:11px;color:#888;">Счётчик общий. Помни о товарищах — им тоже нужна спайка.</p>
+        </div>
+    </div>
+
+    <div style="text-align:center;margin-top:16px;font-size:11px;color:#333;">РУБЕЖ · Черновик 0.41</div>
 
 </div><!-- /wrap -->
 </body>
