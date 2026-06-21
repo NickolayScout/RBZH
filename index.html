@@ -446,12 +446,22 @@
         .sidenav a.nav-block:hover { background: #151515; color: #88bbff; }
         .sidenav a.nav-item {
             display: block;
-            padding: 3px 10px 3px 22px;
+            padding: 3px 10px 3px 12px;
             color: #999;
             text-decoration: none;
             white-space: nowrap;
         }
+        .sidenav a.nav-item::before {
+            content: "\251C\2500 ";
+            color: #444;
+        }
+        .sidenav a.nav-item:last-child::before,
+        .sidenav a.nav-item:has(+ .nav-block)::before {
+            content: "\2514\2500 ";
+            color: #444;
+        }
         .sidenav a.nav-item:hover { background: #151515; color: #F5F5F5; }
+        .sidenav a.nav-item:hover::before { color: #777; }
     </style>
 </head>
 <body>
