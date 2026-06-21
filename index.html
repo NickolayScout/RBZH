@@ -396,9 +396,91 @@
             align-items: center;
             flex: 1;
         }
+
+        /* SIDEBAR NAV */
+        .sidenav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 190px;
+            background: #0d0d0d;
+            border-right: 2px solid #333;
+            overflow-y: auto;
+            overflow-x: hidden;
+            z-index: 1000;
+            transform: translateX(-170px);
+            transition: transform 0.15s ease;
+            font-size: 12px;
+            scrollbar-width: thin;
+            scrollbar-color: #333 #0d0d0d;
+        }
+        .sidenav::-webkit-scrollbar { width: 4px; }
+        .sidenav::-webkit-scrollbar-thumb { background: #333; }
+        .sidenav.open { transform: translateX(0); }
+        .sidenav-toggle {
+            position: sticky;
+            top: 0;
+            display: block;
+            width: 100%;
+            background: #0000AA;
+            border: none;
+            color: #F5F5F5;
+            font-family: "VCR", monospace;
+            font-size: 13px;
+            text-align: right;
+            padding: 8px 10px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+        .sidenav-toggle:hover { background: #0000CC; }
+        .sidenav a.nav-block {
+            display: block;
+            padding: 7px 10px 7px 12px;
+            color: #5599ff;
+            text-decoration: none;
+            font-weight: bold;
+            border-top: 1px solid #222;
+            white-space: nowrap;
+        }
+        .sidenav a.nav-block:hover { background: #151515; color: #88bbff; }
+        .sidenav a.nav-item {
+            display: block;
+            padding: 3px 10px 3px 22px;
+            color: #999;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .sidenav a.nav-item:hover { background: #151515; color: #F5F5F5; }
     </style>
 </head>
 <body>
+<nav id="sidenav" class="sidenav">
+    <button class="sidenav-toggle" id="sidenav-btn">☰</button>
+    <a href="#blok1" class="nav-block">I&nbsp;&nbsp;МИР И ТЫ</a>
+    <a href="#blok2" class="nav-block">II&nbsp;&nbsp;МЕХАНИКИ</a>
+    <a href="#section-broski" class="nav-item">Броски</a>
+    <a href="#section-stress" class="nav-item">Стресс</a>
+    <a href="#section-radio" class="nav-item">Радиосвязь</a>
+    <a href="#section-boi" class="nav-item">Боевая система</a>
+    <a href="#section-spaika" class="nav-item">Спайка</a>
+    <a href="#blok3" class="nav-block">III&nbsp;&nbsp;КЛАССЫ</a>
+    <a href="#class-avangard" class="nav-item">Авангард</a>
+    <a href="#class-marksman" class="nav-item">Марксман</a>
+    <a href="#class-operator" class="nav-item">Оператор</a>
+    <a href="#class-vivisector" class="nav-item">Вивисектор</a>
+    <a href="#class-ataman" class="nav-item">Атаман</a>
+    <a href="#class-shinobi" class="nav-item">Кибершиноби</a>
+    <a href="#class-psionik" class="nav-item">Псионик</a>
+    <a href="#blok-xxx" class="nav-block">XXX&nbsp;&nbsp;ИНВЕНТАРЬ</a>
+    <a href="#section-bronya" class="nav-item">Броня</a>
+    <a href="#section-arsenal" class="nav-item">Арсенал</a>
+    <a href="#section-fire" class="nav-item">Всё что горит</a>
+    <a href="#section-drugs" class="nav-item">Седативы</a>
+    <a href="#section-medic" class="nav-item">Медицина</a>
+    <a href="#section-tech" class="nav-item">Лёгкая техника</a>
+    <a href="#blok-yyy" class="nav-block">YYY&nbsp;&nbsp;ЗВЕНЬЯ</a>
+</nav>
 <div class="page-wrap">
 
     <span class="site-title">РУБЕЖ</span>
@@ -413,7 +495,7 @@
         <p>"Правительство? Правительство на другой планете живет, родной" -- Би, пацак</p>
     </div>
 
-    <div class="block-header">// БЛОК I &nbsp; МИР И ТЫ</div>
+    <div id="blok1" class="block-header">// БЛОК I &nbsp; МИР И ТЫ</div>
     <div class="block-body">
 
         <div class="section-header">Мир: планета Рубеж</div>
@@ -606,10 +688,10 @@
     </div>
 
     <!-- БЛОК II -->
-    <div class="block-header">// БЛОК II &nbsp; МЕХАНИКИ</div>
+    <div id="blok1" class="block-header">// БЛОК II &nbsp; МЕХАНИКИ</div>
     <div class="block-body">
 
-        <div class="section-header">СИСТЕМА БРОСКОВ</div>
+        <div id="section-broski" class="section-header">СИСТЕМА БРОСКОВ</div>
 
         <div class="sub-header">Основной бросок: 2d6 + Стат</div>
         <p>Когда исход действия не очевиден и провал имеет последствия -- ДМ объявляет сложность и запрашивает бросок.
@@ -628,7 +710,7 @@
 
         <div class="dinkus">· · · · · · · · · ·</div>
 
-        <div class="section-header">СТРЕСС</div>
+        <div id="section-stress" class="section-header">СТРЕСС</div>
         <p>Показатель того, как скоро ты сломаешься.
             Он накапливается, когда ты делаешь что-то, противоречащее своим убеждениям, или переживаешь тяжёлые
             события.</p>
@@ -684,7 +766,7 @@
 
         <div class="dinkus">· · · · · · · · · ·</div>
 
-        <div class="section-header">РАДИОСВЯЗЬ</div>
+        <div id="section-radio" class="section-header">РАДИОСВЯЗЬ</div>
         <div class="quote-box"><p>Кто ответит в дождь и в грязь? Наша доблестная связь!</p></div>
         <p>Радиосвязь -- самый распространённый вид коммуникации на Рубеже. Ею пользуются все, начиная с ТУ2, и ты тоже
             можешь!
@@ -785,7 +867,7 @@
 
         <div class="dinkus">· · · · · · · · · ·</div>
 
-        <div class="section-header">БОЕВАЯ СИСТЕМА</div>
+        <div id="section-boi" class="section-header">БОЕВАЯ СИСТЕМА</div>
         <p>За очень редким исключением, бои ведутся с применением огнестрельного оружия,
             от ручных пулемётов и винтовок до орбитальной артиллерии.
             Бой на Рубеже -- это брутальные, скоротечные столкновения; дым, страх и хаос;
@@ -1019,7 +1101,7 @@
         </div>
 
         <div class="dinkus">· · · · · · · · · ·</div>
-        <div class="section-header">СПАЙКА</div>
+        <div id="section-spaika" class="section-header">СПАЙКА</div>
         <p>Показатель слаженности тебя и твоей команды.
             Выражается числом, общим для тебя и твоих товарищей в рамках одной инициативы.</p>
         <p>За каждого <strong>игрового персонажа</strong> в начале боя твоя команда получает <em>5 − Шаг стресса</em>.
@@ -1029,11 +1111,11 @@
 
     </div><!-- /block-body БЛОК II -->
     <!-- БЛОК III -->
-    <div class="block-header">// БЛОК III &nbsp; КЛАССЫ</div>
+    <div id="blok1" class="block-header">// БЛОК III &nbsp; КЛАССЫ</div>
     <div class="block-body">
 
         <!-- АВАНГАРД -->
-        <div class="class-card">
+        <div id="class-avangard" class="class-card">
             <div class="class-header">АВАНГАРД</div>
             <div class="class-body">
                 <div class="quote-box"><p>Всякий, кто бежит -- враг. Всякий, кто стоит - дисциплинированный враг!</p>
@@ -1079,7 +1161,7 @@
         </div>
 
         <!-- МАРКСМАН -->
-        <div class="class-card">
+        <div id="class-marksman" class="class-card">
             <div class="class-header">МАРКСМАН</div>
             <div class="class-body">
                 <div class="quote-box"><p>Таких винтовок много, но эта -- моя.</p></div>
@@ -1145,7 +1227,7 @@
         </div>
 
         <!-- ОПЕРАТОР -->
-        <div class="class-card">
+        <div id="class-operator" class="class-card">
             <div class="class-header">ОПЕРАТОР</div>
             <div class="class-body">
                 <div class="quote-box"><p>Медведь! В цирке! На велосипеде! О-дно-ко-лёс-ном, сука, ездит! А тут идиоты
@@ -1298,7 +1380,7 @@
         </div>
 
         <!-- ВИВИСЕКТОР -->
-        <div class="class-card">
+        <div id="class-vivisector" class="class-card">
             <div class="class-header">ВИВИСЕКТОР</div>
             <div class="class-body">
                 <div class="quote-box">
@@ -1435,7 +1517,7 @@
         </div>
 
         <!-- АТАМАН -->
-        <div class="class-card">
+        <div id="class-ataman" class="class-card">
             <div class="class-header">АТАМАН</div>
             <div class="class-body">
                 <div class="quote-box"><p>Рождённый сражаться не жнёт и не пашет -- иных хватает забот.</p></div>
@@ -1500,7 +1582,7 @@
         </div>
 
         <!-- КИБЕРШИНОБИ -->
-        <div class="class-card">
+        <div id="class-shinobi" class="class-card">
             <div class="class-header">КИБЕРШИНОБИ</div>
             <div class="class-body">
                 <div class="quote-box">
@@ -1614,7 +1696,7 @@
         </div>
 
         <!-- ПСИОНИК -->
-        <div class="class-card">
+        <div id="class-psionik" class="class-card">
             <div class="class-header">ПСИОНИК</div>
             <div class="class-body">
                 <div class="quote-box"><p>От дурного ума лишь сума да тюрьма</p></div>
@@ -1709,12 +1791,12 @@
 
     </div><!-- /block-body БЛОК III -->
     <!-- БЛОК XXX -->
-    <div class="block-header">// БЛОК XXX &nbsp; ИНВЕНТАРЬ</div>
+    <div id="blok-xxx" class="block-header">// БЛОК XXX &nbsp; ИНВЕНТАРЬ</div>
     <div class="block-body">
 
         <p>Хочешь защититься или нанести урон? В любом случае, тебе сюда.</p>
 
-        <div class="section-header">БРОНЯ</div>
+        <div id="section-bronya" class="section-header">БРОНЯ</div>
 
         <table>
             <tr>
@@ -1749,7 +1831,7 @@
             </tr>
         </table>
 
-        <div class="section-header">АРСЕНАЛ</div>
+        <div id="section-arsenal" class="section-header">АРСЕНАЛ</div>
 
         <div style="display:flex; align-items:center">
             <img class="gun-img" src="assets/AR.svg" alt="AR" style="padding-right:12px;">
@@ -2164,7 +2246,7 @@
             Если это оружие стреляет по улитке, зона подавления возникает в месте, куда попал снаряд по улитке.
         </div>
 
-        <div class="section-header">ВСЁ, ЧТО ГОРИТ</div>
+        <div id="section-fire" class="section-header">ВСЁ, ЧТО ГОРИТ</div>
 
         <p>Бросай <em>метательное</em> оружие на расстояние до 15м + 2×Тело.
             До 5 метров снаряд падает <em>именно туда</em>, куда ты хочешь. Если бросаешь дальше, кинь 2d8.
@@ -2306,7 +2388,7 @@
 
         <div class="dinkus">· · · · · · · · · ·</div>
 
-        <div class="section-header">СЕДАТИВЫ И БАРБИТУРАТЫ</div>
+        <div id="section-drugs" class="section-header">СЕДАТИВЫ И БАРБИТУРАТЫ</div>
 
         <div class="quote-box">
             <p>Один мой знакомый говорил, что кориандровая действует на человека антигуманно, то есть, укрепляя все
@@ -2538,7 +2620,7 @@
             </div>
         </div>
 
-        <div class="section-header">ПОЛЕВАЯ МЕДИЦИНА</div>
+        <div id="section-medic" class="section-header">ПОЛЕВАЯ МЕДИЦИНА</div>
 
         <div class="sub-header">Пакет крови</div>
         <p>Восстанавливает 2 крови. Использовав, выброси: он бесполезен.</p>
@@ -2555,7 +2637,7 @@
         <p>Почка? Печень? Сердце, которое ещё бьётся?
             Поддерживает жизнь в одном органе. Используй, чтобы перепродать орбитальным торговцам.</p>
 
-        <div class="section-header">ЛЁГКАЯ ТЕХНИКА</div>
+        <div id="section-tech" class="section-header">ЛЁГКАЯ ТЕХНИКА</div>
 
         <div class="sub-header">Техничка</div>
         <p>Полноприводный джип с открытым кузовом.
@@ -2609,7 +2691,7 @@
 
     </div><!-- /block-body -->
 
-    <div class="block-header">// БЛОК YYY &nbsp; ТЫ И ТЕБЕ ПОДОБНЫЕ</div>
+    <div id="blok-yyy" class="block-header">// БЛОК YYY &nbsp; ТЫ И ТЕБЕ ПОДОБНЫЕ</div>
     <div class="block-body">
 
         <div class="quote-box">
@@ -2679,5 +2761,18 @@
     </div>
 
 </div><!-- /page-wrap -->
+
+<script>
+    const nav = document.getElementById('sidenav');
+    const btn = document.getElementById('sidenav-btn');
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        btn.textContent = nav.classList.contains('open') ? '✕' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        btn.textContent = '☰';
+    }));
+</script>
 </body>
 </html>
