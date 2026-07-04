@@ -50,7 +50,7 @@ and the prisoner generously donated their blood to all in need. This is fine -- 
 During the same platest, two combat encounters took less than 5 turns (player has 8-12 blood on average and looses one per turn when bleeding). 
 So mathematically, even if everybody took a bleeding on their first turn, they would finish the encounter before bleeding out. I've decided to keep system as-is for now: playtests were relatively short, not enough for blood loss to accumulate. I'd rather under-balance this system than over-balance for now, as it involves killing PC. If it turns out to be too gentle across many sessions, I'll patch it up.
 
-2) Metageming
+2) Metagaming
 
 We all know it. Players do, from time to time, act too rational on the table with little to no downsides. Which is why I've added personal beliefs and stress system -- iteration over alignments. 
 When creating a character, player chooses a set of catchphrases that describe their personal code: "Path is as important as destination", "I always keep my word", "I am responsible for my team" -- that sort of thing. When player acts against their own beliefs, they gain stress, which results in debuffs.
@@ -65,9 +65,9 @@ During playtest, this system played out once -- a character with "I am responsib
 3) Downtime between turns.
 
 This was discovered during first playtest. I introduced a "squad" management for groups of similar enemies, and, later, gave players something to do between turns.
-DND solves it by "reaction" resource, which you can spend once between your turns. I've added a shared team resource called "Fusion / Coherence" (depending on how you  want it translated), which is a **shared resource** of players can spend on powerful support actions between turns. This resource is finite within one initiative, shared between players suggesting tragedy of commons kind of managment, and scales down with players' stress. The more PCs are stressed, the less coherent their unit is, tiying stress mechanics closer to combat.
+DND solves it by "reaction" resource, which you can spend once between your turns. I've added a shared team resource called "Fusion / Coherence" (depending on how you  want it translated), which is a **shared resource** of players can spend on powerful support actions between turns. This resource is finite within one initiative, shared between players suggesting tragedy of commons kind of managment, and scales down with players' stress. The more PCs are stressed, the less coherent their unit is, tying stress mechanics closer to combat.
 
-On a side note, I've experimented with "deck of turns" which reshuffles initiative every round. The idea was to keep players engaged, because they would not know whose next turn is. The Ataman class -- a "warleader" whoose primary feature is leading a bunch of somewhat disposable NPCs -- would have access to see turn order, and class ability to swap two players in that deck, emphasizing "tactical leader" archetype. As much as I loved the concept, it was scrapped because reshuffling the deck each round is a lot of overhead on the table.
+On a side note, I've experimented with "deck of turns" which reshuffles initiative every round. The idea was to keep players engaged, because they would not know whose next turn is. The Ataman class -- a "warleader" whose primary feature is leading a bunch of somewhat disposable NPCs -- would have access to see turn order, and class ability to swap two players in that deck, emphasizing "tactical leader" archetype. As much as I loved the concept, it was scrapped because reshuffling the deck each round is a lot of overhead on the table.
 
 4) Hoarding
 
@@ -80,3 +80,4 @@ This has not been playtested yet. God help me if players "choose" not to be orbi
 This was the least expected one. A rather original setting means there is no online community to draw maps and character tokens for me, so I had to learn doing it myself. I ended up using Inkscape and producing both maps and icons in-house as SVGs. I've chosen a "tourist map" kind of layout for maps -- it's clean, easy to paint, and easy to learn once you know the legend. 
 
 Another problem highlighted by playtest was range of certain weapons -- heavy sniper rifle can take out targets up to a kilometer -- so I've adopted "sightline control" for level design, meaning no point except highground should allow player to see the map from one end to another.
+
